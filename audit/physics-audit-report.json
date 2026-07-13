@@ -1,0 +1,169 @@
+{
+  "generatedAt": "2026-07-13T12:22:46.586Z",
+  "system": "battery-magnet train inside an uninsulated copper solenoid",
+  "passed": 7,
+  "total": 7,
+  "results": [
+    {
+      "name": "closed-aligned-right",
+      "input": {
+        "circuitClosed": true,
+        "magnetMode": "aligned",
+        "polarity": "right",
+        "voltage": 1.5
+      },
+      "expected": {
+        "direction": 1,
+        "relativeForcePercent": 60
+      },
+      "actual": {
+        "circuitClosed": true,
+        "aligned": true,
+        "direction": 1,
+        "forceFraction": 1,
+        "relativeForcePercent": 60,
+        "moving": true,
+        "explanation": "迴路閉合且磁極配置正確，模型預測向右移動。"
+      },
+      "passed": true
+    },
+    {
+      "name": "closed-aligned-left",
+      "input": {
+        "circuitClosed": true,
+        "magnetMode": "aligned",
+        "polarity": "left",
+        "voltage": 1.5
+      },
+      "expected": {
+        "direction": -1,
+        "relativeForcePercent": 60
+      },
+      "actual": {
+        "circuitClosed": true,
+        "aligned": true,
+        "direction": -1,
+        "forceFraction": 1,
+        "relativeForcePercent": 60,
+        "moving": true,
+        "explanation": "迴路閉合且磁極配置正確，模型預測向左移動。"
+      },
+      "passed": true
+    },
+    {
+      "name": "open-circuit",
+      "input": {
+        "circuitClosed": false,
+        "magnetMode": "aligned",
+        "polarity": "right",
+        "voltage": 1.5
+      },
+      "expected": {
+        "direction": 0,
+        "relativeForcePercent": 0
+      },
+      "actual": {
+        "circuitClosed": false,
+        "aligned": true,
+        "direction": 0,
+        "forceFraction": 0,
+        "relativeForcePercent": 0,
+        "moving": false,
+        "explanation": "接觸中斷，沒有閉合電路，因此線圈中沒有由電池驅動的持續電流。"
+      },
+      "passed": true
+    },
+    {
+      "name": "reversed-magnet",
+      "input": {
+        "circuitClosed": true,
+        "magnetMode": "opposed",
+        "polarity": "right",
+        "voltage": 1.5
+      },
+      "expected": {
+        "direction": 0,
+        "relativeForcePercent": 0
+      },
+      "actual": {
+        "circuitClosed": true,
+        "aligned": false,
+        "direction": 0,
+        "forceFraction": 0,
+        "relativeForcePercent": 0,
+        "moving": false,
+        "explanation": "翻轉一側磁鐵後，兩端作用不再同向相加；此概念模型以淨推力為零表示。"
+      },
+      "passed": true
+    },
+    {
+      "name": "low-voltage-boundary",
+      "input": {
+        "circuitClosed": true,
+        "magnetMode": "aligned",
+        "polarity": "right",
+        "voltage": 0.5
+      },
+      "expected": {
+        "direction": 1,
+        "relativeForcePercent": 20
+      },
+      "actual": {
+        "circuitClosed": true,
+        "aligned": true,
+        "direction": 1,
+        "forceFraction": 0.3333333333333333,
+        "relativeForcePercent": 20,
+        "moving": true,
+        "explanation": "迴路閉合且磁極配置正確，模型預測向右移動。"
+      },
+      "passed": true
+    },
+    {
+      "name": "voltage-clamped-high",
+      "input": {
+        "circuitClosed": true,
+        "magnetMode": "aligned",
+        "polarity": "right",
+        "voltage": 9
+      },
+      "expected": {
+        "direction": 1,
+        "relativeForcePercent": 60
+      },
+      "actual": {
+        "circuitClosed": true,
+        "aligned": true,
+        "direction": 1,
+        "forceFraction": 1,
+        "relativeForcePercent": 60,
+        "moving": true,
+        "explanation": "迴路閉合且磁極配置正確，模型預測向右移動。"
+      },
+      "passed": true
+    },
+    {
+      "name": "voltage-clamped-low",
+      "input": {
+        "circuitClosed": true,
+        "magnetMode": "aligned",
+        "polarity": "right",
+        "voltage": -2
+      },
+      "expected": {
+        "direction": 1,
+        "relativeForcePercent": 20
+      },
+      "actual": {
+        "circuitClosed": true,
+        "aligned": true,
+        "direction": 1,
+        "forceFraction": 0.3333333333333333,
+        "relativeForcePercent": 20,
+        "moving": true,
+        "explanation": "迴路閉合且磁極配置正確，模型預測向右移動。"
+      },
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "electric-train-interactive-lesson",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-check.mjs",
+    "test": "node scripts/physics-audit.mjs",
+    "check": "npm run build && npm test"
+  }
+}

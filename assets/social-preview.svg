@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">線圈裡的小火車社群預覽圖</title>
+  <desc id="desc">深藍色背景上，右側是位於銅線圈中的電池與磁鐵小火車，左側標示電與磁互動教材。</desc>
+  <defs>
+    <linearGradient id="bg-social" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#102a43"/>
+      <stop offset="1" stop-color="#243b53"/>
+    </linearGradient>
+    <linearGradient id="metal-social" x1="0" x2="1">
+      <stop stop-color="#bcccdc"/>
+      <stop offset=".5" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#9fb3c8"/>
+    </linearGradient>
+    <filter id="shadow-social" x="-20%" y="-30%" width="140%" height="180%">
+      <feDropShadow dx="0" dy="16" stdDeviation="14" flood-color="#071b2d" flood-opacity=".45"/>
+    </filter>
+    <marker id="arrow-social" markerWidth="12" markerHeight="12" refX="10" refY="4" orient="auto">
+      <path d="M0 0v8l11-4z" fill="#fbbf24"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg-social)"/>
+  <circle cx="1070" cy="-20" r="250" fill="#0b7285" opacity=".13"/>
+  <circle cx="1030" cy="680" r="280" fill="#f59f00" opacity=".09"/>
+  <g transform="translate(82 68)">
+    <circle cx="34" cy="34" r="34" fill="#fbbf24"/>
+    <path d="M40 8 22 37h13l-3 23 20-32H39z" fill="#102a43"/>
+    <text x="84" y="24" fill="#fbbf24" font-family="Arial, Microsoft JhengHei, sans-serif" font-size="18" font-weight="800" letter-spacing="3">ELECTRIC TRAIN LAB</text>
+    <text x="0" y="146" fill="#fffdf8" font-family="Georgia, Noto Serif TC, Microsoft JhengHei, serif" font-size="70" font-weight="800">線圈裡的</text>
+    <text x="0" y="226" fill="#f59f00" font-family="Georgia, Noto Serif TC, Microsoft JhengHei, serif" font-size="82" font-weight="800">小火車</text>
+    <rect x="0" y="262" width="420" height="3" fill="#486581"/>
+    <text x="0" y="315" fill="#d9e2ec" font-family="Arial, Microsoft JhengHei, sans-serif" font-size="28">從一顆電池，看懂</text>
+    <text x="0" y="362" fill="#ffffff" font-family="Arial, Microsoft JhengHei, sans-serif" font-size="31" font-weight="800">電流 × 磁場 × 力</text>
+    <g transform="translate(0 423)" font-family="Arial, Microsoft JhengHei, sans-serif" font-size="21" font-weight="700">
+      <rect width="142" height="52" rx="26" fill="#0b7285"/><text x="71" y="34" text-anchor="middle" fill="white">互動模型</text>
+      <rect x="154" width="142" height="52" rx="26" fill="#334e68" stroke="#627d98"/><text x="225" y="34" text-anchor="middle" fill="white">證據闖關</text>
+      <rect x="308" width="142" height="52" rx="26" fill="#334e68" stroke="#627d98"/><text x="379" y="34" text-anchor="middle" fill="white">安全實作</text>
+    </g>
+  </g>
+  <g transform="translate(585 95)" filter="url(#shadow-social)">
+    <rect x="0" y="0" width="530" height="440" rx="42" fill="#fff7ed"/>
+    <text x="265" y="54" text-anchor="middle" fill="#8a4b00" font-family="Arial, Microsoft JhengHei, sans-serif" font-size="23" font-weight="800">閉合電路 → 線圈磁場 → 同向合力</text>
+    <g fill="none" stroke="#a65f2e" stroke-width="7" opacity=".72">
+      <path d="M45 105Q15 225 45 345 M79 105Q49 225 79 345 M113 105Q83 225 113 345 M147 105Q117 225 147 345 M181 105Q151 225 181 345 M215 105Q185 225 215 345 M249 105Q219 225 249 345 M283 105Q253 225 283 345 M317 105Q287 225 317 345 M351 105Q321 225 351 345 M385 105Q355 225 385 345 M419 105Q389 225 419 345 M453 105Q423 225 453 345 M487 105Q457 225 487 345"/>
+    </g>
+    <g transform="translate(105 165)">
+      <rect x="0" y="0" width="66" height="118" rx="17" fill="#334e68"/>
+      <rect x="8" y="9" width="25" height="100" rx="8" fill="#ef4444"/>
+      <rect x="33" y="9" width="25" height="100" rx="8" fill="#2563eb"/>
+      <text x="11" y="69" fill="white" font-family="Arial, sans-serif" font-size="19" font-weight="900">N S</text>
+      <rect x="66" y="13" width="210" height="92" rx="46" fill="url(#metal-social)" stroke="#102a43" stroke-width="5"/>
+      <rect x="82" y="22" width="139" height="74" rx="34" fill="#111827"/>
+      <rect x="221" y="22" width="46" height="74" rx="9" fill="#fbbf24"/>
+      <text x="116" y="69" fill="white" font-family="Arial, sans-serif" font-size="27" font-weight="800">1.5 V</text>
+      <text x="72" y="-10" fill="#102a43" font-family="Arial, sans-serif" font-size="29" font-weight="900">−</text>
+      <text x="247" y="-10" fill="#102a43" font-family="Arial, sans-serif" font-size="29" font-weight="900">＋</text>
+      <rect x="276" y="0" width="66" height="118" rx="17" fill="#334e68"/>
+      <rect x="284" y="9" width="25" height="100" rx="8" fill="#2563eb"/>
+      <rect x="309" y="9" width="25" height="100" rx="8" fill="#ef4444"/>
+      <text x="287" y="69" fill="white" font-family="Arial, sans-serif" font-size="19" font-weight="900">S N</text>
+      <path d="M42-40h86" stroke="#fbbf24" stroke-width="9" marker-end="url(#arrow-social)"/>
+      <path d="M300-40h86" stroke="#fbbf24" stroke-width="9" marker-end="url(#arrow-social)"/>
+    </g>
+    <text x="265" y="401" text-anchor="middle" fill="#627d98" font-family="Arial, Microsoft JhengHei, sans-serif" font-size="22">操作變因 · 蒐集證據 · 修正解釋</text>
+  </g>
+</svg>

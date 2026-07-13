@@ -1,0 +1,15 @@
+【繁體中文】
+一顆乾電池、兩組磁鐵和一條裸銅線圈，為什麼能變成會前進的小火車？
+
+這份互動教材從 AmazingScience 的經典影片出發，帶學生先觀察現象，再操作磁鐵接觸、磁極配置、電池方向與模型電壓，用證據一步步理解「閉合電路 → 線圈磁場 → 磁力與運動」。教材也包含即時回饋闖關與實作安全提醒。
+
+歡迎點進去動手試試看：
+https://prayer168.github.io/electric-train/
+
+【English】
+How can one dry-cell battery, two sets of magnets, and a bare copper coil become a moving train?
+
+This interactive lesson begins with AmazingScience’s classic video, then invites learners to test contact, magnet orientation, battery polarity, and model voltage. Step by step, evidence connects a closed circuit to the coil’s magnetic field, magnetic forces, and motion. The lesson also includes instant-feedback challenges and hands-on safety guidance.
+
+Explore the interactive lesson:
+https://prayer168.github.io/electric-train/

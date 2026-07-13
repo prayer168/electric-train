@@ -1,0 +1,12 @@
+{
+  "system": "battery-magnet train inside an uninsulated copper solenoid",
+  "entry": "index.html",
+  "model": "physics-model.mjs",
+  "signConvention": "direction +1 is right; -1 is left; conventional current follows the battery polarity",
+  "limits": [
+    "Relative force is a teaching index, not a force in newtons.",
+    "Friction, contact resistance, battery internal resistance, coil pitch, heating and terminal speed are not simulated.",
+    "A reversed end magnet is represented as zero net thrust to teach loss of same-direction force addition."
+  ],
+  "boundaries": ["open versus closed circuit", "aligned versus reversed end magnet", "0.5 V and 1.5 V slider limits", "battery polarity reversal"]
+}

@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="從 World's Simplest Electric Train 影片探索閉合電路、線圈磁場與磁力小火車的互動教材。">
+  <meta name="theme-color" content="#102a43">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://prayer168.github.io/electric-train/">
+  <meta property="og:title" content="線圈裡的小火車｜電與磁互動教材">
+  <meta property="og:description" content="從一顆電池、兩組磁鐵與裸銅線圈，探索閉合電路、線圈磁場與運動方向。">
+  <meta property="og:image" content="https://prayer168.github.io/electric-train/assets/social-preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="線圈裡的小火車互動教材：電池與磁鐵組成的小火車位於銅線圈中">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="線圈裡的小火車｜電與磁互動教材">
+  <meta name="twitter:description" content="操作變因、蒐集證據，理解閉合電路、磁場與受力。">
+  <meta name="twitter:image" content="https://prayer168.github.io/electric-train/assets/social-preview.png">
+  <meta name="twitter:image:alt" content="線圈裡的小火車互動教材：電池與磁鐵組成的小火車位於銅線圈中">
+  <title>線圈裡的小火車｜電與磁互動教材</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#lesson-content">跳到教材內容</a>
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">↯</span>
+      <div>
+        <p class="eyebrow">ELECTRIC TRAIN LAB</p>
+        <h1>線圈裡的小火車</h1>
+      </div>
+    </div>
+    <div class="progress-wrap" aria-label="學習進度">
+      <span id="progressText">0 / 4 個學習任務</span>
+      <div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div>
+    </div>
+  </header>
+
+  <nav class="lesson-tabs" aria-label="教材單元" role="tablist">
+    <button role="tab" aria-selected="true" aria-controls="panel-observe" id="tab-observe" data-tab="observe">01 先觀察</button>
+    <button role="tab" aria-selected="false" aria-controls="panel-explain" id="tab-explain" data-tab="explain" tabindex="-1">02 拆原理</button>
+    <button role="tab" aria-selected="false" aria-controls="panel-lab" id="tab-lab" data-tab="lab" tabindex="-1">03 玩模型</button>
+    <button role="tab" aria-selected="false" aria-controls="panel-challenge" id="tab-challenge" data-tab="challenge" tabindex="-1">04 證據闖關</button>
+    <button role="tab" aria-selected="false" aria-controls="panel-safety" id="tab-safety" data-tab="safety" tabindex="-1">05 安全實作</button>
+  </nav>
+
+  <main id="lesson-content">
+    <section class="lesson-panel active" id="panel-observe" role="tabpanel" aria-labelledby="tab-observe">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="chapter">01 · 現象比答案更早出現</p>
+          <h2>電池沒有輪子，<br><em>為什麼會跑？</em></h2>
+          <p class="lead">影片用一顆乾電池、兩組釹磁鐵與裸銅線圈，做出會在直線、圓形甚至 8 字軌道裡前進的「小火車」。先別急著背原理，請找出運動開始的條件。</p>
+          <div class="notice compact">
+            <span aria-hidden="true">◎</span>
+            <p><strong>影片解析</strong>：AmazingScience，2014，1 分 42 秒。片中沒有口語講解；教材依畫面順序與作者說明文字整理。</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <div class="video-frame">
+            <iframe src="https://www.youtube-nocookie.com/embed/J9b0J29OzAU" title="World's Simplest Electric Train 原始影片" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="video-meta"><span>原始觀察素材</span><a href="https://www.youtube.com/watch?v=J9b0J29OzAU" target="_blank" rel="noopener noreferrer">在 YouTube 開啟 ↗</a></div>
+        </div>
+      </div>
+
+      <div class="observation-strip" aria-label="影片觀察節點">
+        <article><span>00:00–00:20</span><h3>進入直線圈</h3><p>磁鐵接觸線圈後，電池組才開始移動。</p></article>
+        <article><span>00:20–01:10</span><h3>封閉圓軌道</h3><p>移動中的接觸點，讓通電區段跟著「火車」前進。</p></article>
+        <article><span>01:10–01:34</span><h3>彎成 8 字</h3><p>改變軌道形狀後仍可前進，關鍵不是直線本身。</p></article>
+      </div>
+
+      <section class="task-card" aria-labelledby="predictTitle">
+        <div><p class="task-label">觀察任務 A</p><h3 id="predictTitle">哪一項最可能是「開始移動」的必要條件？</h3></div>
+        <div class="choice-grid" id="predictionChoices">
+          <button data-prediction="shape">線圈必須是圓形</button>
+          <button data-prediction="closed">磁鐵與裸銅線圈形成閉合電路</button>
+          <button data-prediction="gravity">軌道必須向下傾斜</button>
+        </div>
+        <p class="feedback" id="predictionFeedback" role="status" aria-live="polite">選一個假設，再到下一頁找證據。</p>
+      </section>
+    </section>
+
+    <section class="lesson-panel" id="panel-explain" role="tabpanel" aria-labelledby="tab-explain" hidden>
+      <div class="section-heading">
+        <p class="chapter">02 · 四步驟因果鏈</p>
+        <h2>不是魔法，是一段會跟著移動的電磁系統</h2>
+        <p>真正通電的不是整條線圈，而是兩端磁鐵接觸點之間的那一小段。</p>
+      </div>
+
+      <div class="mechanism-figure">
+        <svg viewBox="0 0 1000 360" role="img" aria-labelledby="mechanismTitle mechanismDesc">
+          <title id="mechanismTitle">磁力小火車的電流、磁場與受力示意</title>
+          <desc id="mechanismDesc">電池兩端的磁鐵接觸裸銅線圈，電流只通過兩組磁鐵之間的線圈。通電線圈產生軸向磁場，兩端磁鐵分別受到同方向的推與拉，使整組向右移動。</desc>
+          <defs>
+            <marker id="arrow-blue-mechanism" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#0b7285"/></marker>
+            <marker id="arrow-gold-mechanism" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#f59f00"/></marker>
+          </defs>
+          <g class="coil-lines" fill="none" stroke="#a65f2e" stroke-width="7">
+            <path d="M75 96 Q45 180 75 264 M105 96 Q75 180 105 264 M135 96 Q105 180 135 264 M165 96 Q135 180 165 264 M195 96 Q165 180 195 264 M225 96 Q195 180 225 264" opacity=".35"/>
+            <path d="M255 96 Q225 180 255 264 M285 96 Q255 180 285 264 M315 96 Q285 180 315 264 M345 96 Q315 180 345 264 M375 96 Q345 180 375 264 M405 96 Q375 180 405 264 M435 96 Q405 180 435 264 M465 96 Q435 180 465 264 M495 96 Q465 180 495 264 M525 96 Q495 180 525 264 M555 96 Q525 180 555 264 M585 96 Q555 180 585 264 M615 96 Q585 180 615 264 M645 96 Q615 180 645 264 M675 96 Q645 180 675 264 M705 96 Q675 180 705 264 M735 96 Q705 180 735 264" stroke="#d97706"/>
+            <path d="M765 96 Q735 180 765 264 M795 96 Q765 180 795 264 M825 96 Q795 180 825 264 M855 96 Q825 180 855 264 M885 96 Q855 180 885 264 M915 96 Q885 180 915 264" opacity=".35"/>
+          </g>
+          <g aria-hidden="true">
+            <rect x="314" y="134" width="78" height="92" rx="18" fill="#334e68"/>
+            <rect x="322" y="142" width="31" height="76" rx="9" fill="#ef4444"/><rect x="353" y="142" width="31" height="76" rx="9" fill="#2563eb"/>
+            <rect x="392" y="143" width="216" height="74" rx="37" fill="#e4e7eb" stroke="#102a43" stroke-width="4"/>
+            <rect x="410" y="152" width="145" height="56" rx="28" fill="#111827"/><rect x="555" y="152" width="45" height="56" rx="8" fill="#fbbf24"/>
+            <text x="430" y="188" fill="white" font-size="24" font-weight="700">電池</text><text x="568" y="189" fill="#111827" font-size="27" font-weight="900">＋</text>
+            <rect x="608" y="134" width="78" height="92" rx="18" fill="#334e68"/>
+            <rect x="616" y="142" width="31" height="76" rx="9" fill="#2563eb"/><rect x="647" y="142" width="31" height="76" rx="9" fill="#ef4444"/>
+            <text x="335" y="190" fill="white" font-size="20" font-weight="800">N S</text><text x="623" y="190" fill="white" font-size="20" font-weight="800">S N</text>
+          </g>
+          <path d="M700 54 H865" stroke="#f59f00" stroke-width="8" marker-end="url(#arrow-gold-mechanism)"/>
+          <text x="699" y="38" fill="#8a4b00" font-size="24" font-weight="800">合力與運動方向</text>
+          <path d="M590 290 H405" stroke="#0b7285" stroke-width="7" marker-end="url(#arrow-blue-mechanism)"/>
+          <text x="416" y="330" fill="#0b7285" font-size="22" font-weight="800">傳統電流：＋ → 線圈 → −</text>
+          <text x="86" y="63" fill="#7c2d12" font-size="20">未通電區</text><text x="427" y="63" fill="#7c2d12" font-size="20" font-weight="800">兩接觸點間：通電區</text><text x="812" y="63" fill="#7c2d12" font-size="20">未通電區</text>
+        </svg>
+        <p class="figure-note">教學示意，磁場線與尺寸未按真實比例。圖中磁鐵朝外的磁極相同，兩端受力才會同向相加。</p>
+      </div>
+
+      <div class="cause-grid">
+        <article><span>1</span><h3>接觸成迴路</h3><p>金屬鍍層磁鐵兼作電極接點，碰到<strong>裸銅線</strong>後，電池、磁鐵與線圈形成閉合電路。</p></article>
+        <article><span>2</span><h3>局部有電流</h3><p>傳統電流由正極流入線圈，再回到負極；主要通電區在兩組磁鐵之間。</p></article>
+        <article><span>3</span><h3>線圈成電磁鐵</h3><p>電流繞著線圈流動，產生沿線圈軸向的磁場；兩端附近的磁場不均勻。</p></article>
+        <article><span>4</span><h3>推與拉同方向</h3><p>正確磁極配置下，一端被推、另一端被拉，兩個力同向；火車一移動，通電區也跟著移動。</p></article>
+      </div>
+
+      <aside class="misconception">
+        <p class="task-label">迷思偵測</p>
+        <h3>它不是哪一種列車？</h3>
+        <div class="myth-grid">
+          <div><strong>不是磁浮列車</strong><p>磁鐵實際接觸銅線圈，沒有懸浮在軌道上方。</p></div>
+          <div><strong>不是「磁鐵吸銅」</strong><p>銅不是靠一般磁吸被拉動；關鍵是銅線中的電流與磁場交互作用。</p></div>
+          <div><strong>不是法拉第感應主角</strong><p>本裝置的電流主要由電池直接驅動，不是靠磁通量改變產生電流。</p></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="lesson-panel" id="panel-lab" role="tabpanel" aria-labelledby="tab-lab" hidden>
+      <div class="section-heading split-heading">
+        <div><p class="chapter">03 · 改一個條件，看一個結果</p><h2>磁力小火車控制台</h2></div>
+        <p>先預測，再按下運行。模型只呈現方向與相對推力，不模擬真實速度、摩擦或電池內阻。</p>
+      </div>
+
+      <div class="lab-layout">
+        <div class="sim-card">
+          <div class="sim-status">
+            <span id="circuitBadge" class="status-pill on">迴路閉合</span>
+            <span id="forceReadout">相對推力 60%</span>
+          </div>
+          <svg id="trainSim" viewBox="0 0 1000 420" role="img" aria-labelledby="simTitle simDesc">
+            <title id="simTitle">可操作的磁力小火車模型</title>
+            <desc id="simDesc">一列由電池和兩組磁鐵構成的小火車，位於裸銅線圈內。調整電路、磁極、電池方向與電壓後，可以觀察是否移動以及移動方向。</desc>
+            <defs>
+              <linearGradient id="battery-metal-sim" x1="0" x2="1"><stop stop-color="#d9e2ec"/><stop offset=".5" stop-color="#f8fafc"/><stop offset="1" stop-color="#bcccdc"/></linearGradient>
+              <marker id="force-arrow-sim" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto"><path d="M0,0 L0,7 L9,3.5 z" fill="#f59f00"/></marker>
+            </defs>
+            <rect x="50" y="70" width="900" height="280" rx="28" fill="#fff7ed" stroke="#fed7aa" stroke-width="3"/>
+            <g id="coilBack" fill="none" stroke="#a65f2e" stroke-width="5" opacity=".55"></g>
+            <g id="poweredCoil" fill="none" stroke="#f59f00" stroke-width="8"></g>
+            <g id="trainGroup" transform="translate(365 0)">
+              <g id="leftMagnet">
+                <rect x="0" y="155" width="66" height="110" rx="16" fill="#334e68"/>
+                <rect class="pole-a" x="8" y="164" width="25" height="92" rx="8" fill="#ef4444"/><rect class="pole-b" x="33" y="164" width="25" height="92" rx="8" fill="#2563eb"/>
+                <text class="left-pole-label" x="11" y="218" fill="white" font-size="18" font-weight="900">N S</text>
+              </g>
+              <g id="batteryGroup">
+                <rect x="66" y="166" width="202" height="88" rx="42" fill="url(#battery-metal-sim)" stroke="#102a43" stroke-width="4"/>
+                <rect x="82" y="174" width="135" height="72" rx="32" fill="#111827"/>
+                <rect x="217" y="174" width="42" height="72" rx="8" fill="#fbbf24"/>
+                <text x="110" y="220" fill="white" font-size="23" font-weight="800">1.5 V</text>
+                <text id="negativeLabel" x="74" y="153" font-size="30" font-weight="900" fill="#102a43">−</text>
+                <text id="positiveLabel" x="241" y="153" font-size="30" font-weight="900" fill="#102a43">＋</text>
+              </g>
+              <g id="rightMagnet">
+                <rect x="268" y="155" width="66" height="110" rx="16" fill="#334e68"/>
+                <rect class="pole-b" x="276" y="164" width="25" height="92" rx="8" fill="#2563eb"/><rect class="pole-a" x="301" y="164" width="25" height="92" rx="8" fill="#ef4444"/>
+                <text class="right-pole-label" x="279" y="218" fill="white" font-size="18" font-weight="900">S N</text>
+              </g>
+              <g id="forceArrows" stroke="#f59f00" stroke-width="8" marker-end="url(#force-arrow-sim)">
+                <path class="force-arrow" d="M18 120 H84"/><path class="force-arrow" d="M276 120 H342"/>
+              </g>
+            </g>
+            <text x="70" y="390" fill="#627d98" font-size="20">裸銅線圈（示意）</text>
+            <text id="directionText" x="500" y="40" text-anchor="middle" fill="#8a4b00" font-size="24" font-weight="900">預測：會向右移動</text>
+          </svg>
+          <div class="sim-controls-inline">
+            <button class="primary" id="runSim">▶ 運行</button>
+            <button id="pauseSim">Ⅱ 暫停</button>
+            <button id="resetSim">↺ 重設位置</button>
+          </div>
+          <p class="feedback" id="simFeedback" role="status" aria-live="polite">目前條件可形成閉合電路，兩端受力同向。</p>
+        </div>
+
+        <form class="control-card" id="simControls">
+          <div class="control-heading"><p class="task-label">變因面板</p><h3>一次只改一個條件</h3></div>
+          <label class="switch-row" for="circuitToggle"><span><strong>磁鐵接觸線圈</strong><small>決定迴路是否閉合</small></span><input type="checkbox" id="circuitToggle" checked><span class="switch" aria-hidden="true"></span></label>
+          <label for="magnetSelect">磁極配置</label>
+          <select id="magnetSelect">
+            <option value="aligned">朝外磁極相同（可前進）</option>
+            <option value="opposed">翻轉右側磁鐵（力互相抵銷）</option>
+          </select>
+          <label for="polaritySelect">電池方向</label>
+          <select id="polaritySelect">
+            <option value="right">正極在右</option>
+            <option value="left">正極在左</option>
+          </select>
+          <label for="voltageRange">模型電壓 <output id="voltageOutput" for="voltageRange">1.5 V</output></label>
+          <input type="range" id="voltageRange" min="0.5" max="1.5" value="1.5" step="0.1">
+          <div class="prediction-box">
+            <strong>運行前先說：</strong>
+            <p>它會往哪裡？哪一項證據支持你的預測？</p>
+          </div>
+        </form>
+      </div>
+
+      <section class="evidence-table-card">
+        <div><p class="task-label">觀察任務 B</p><h3>固定其他條件，只反轉電池方向</h3></div>
+        <p>如果運動方向跟著反轉，表示「電流方向」會改變磁場與合力方向。完成操作後勾選：</p>
+        <label class="check-evidence"><input type="checkbox" id="labEvidence"> 我已用相同磁極配置，比較正極在左／右兩種結果。</label>
+      </section>
+    </section>
+
+    <section class="lesson-panel" id="panel-challenge" role="tabpanel" aria-labelledby="tab-challenge" hidden>
+      <div class="section-heading">
+        <p class="chapter">04 · 不靠猜，靠證據</p>
+        <h2>三站證據闖關</h2>
+        <p>每題答對才算過站；答錯時會告訴你應回頭觀察哪個關係。</p>
+      </div>
+      <form id="quizForm" class="quiz-stack">
+        <fieldset class="quiz-card" data-answer="bare">
+          <legend><span>1</span>若把裸銅線換成完整漆包線，最直接會發生什麼事？</legend>
+          <label><input type="radio" name="q1" value="faster"> 線圈更光滑，所以跑更快</label>
+          <label><input type="radio" name="q1" value="bare"> 絕緣層阻斷接觸，難以形成閉合電路</label>
+          <label><input type="radio" name="q1" value="float"> 磁鐵會開始懸浮</label>
+          <p class="quiz-feedback" role="status"></p>
+        </fieldset>
+        <fieldset class="quiz-card" data-answer="segment">
+          <legend><span>2</span>影片中的長線圈，哪一段主要有電池驅動的電流？</legend>
+          <label><input type="radio" name="q2" value="all"> 整條線圈同時通電</label>
+          <label><input type="radio" name="q2" value="ahead"> 只有火車前方</label>
+          <label><input type="radio" name="q2" value="segment"> 兩組磁鐵接觸點之間</label>
+          <p class="quiz-feedback" role="status"></p>
+        </fieldset>
+        <fieldset class="quiz-card" data-answer="reverse">
+          <legend><span>3</span>保持磁極配置不變，只把電池正負方向反轉，模型預測什麼？</legend>
+          <label><input type="radio" name="q3" value="stop"> 一定停止，因為電池只能朝一邊放</label>
+          <label><input type="radio" name="q3" value="reverse"> 電流與磁場方向反轉，運動方向也反轉</label>
+          <label><input type="radio" name="q3" value="same"> 仍朝原方向，磁鐵方向才是唯一條件</label>
+          <p class="quiz-feedback" role="status"></p>
+        </fieldset>
+        <fieldset class="quiz-card" data-answer="contact">
+          <legend><span>4</span>哪一個影片證據最能反駁「它靠斜坡重力前進」？</legend>
+          <label><input type="radio" name="q4" value="color"> 銅線是棕色</label>
+          <label><input type="radio" name="q4" value="contact"> 它能在水平的圓形與 8 字線圈中持續繞行</label>
+          <label><input type="radio" name="q4" value="battery"> 電池是圓柱形</label>
+          <p class="quiz-feedback" role="status"></p>
+        </fieldset>
+        <button type="submit" class="primary quiz-submit">檢查我的證據</button>
+        <div id="quizResult" class="result-card" role="status" aria-live="polite">尚未作答</div>
+      </form>
+    </section>
+
+    <section class="lesson-panel" id="panel-safety" role="tabpanel" aria-labelledby="tab-safety" hidden>
+      <div class="section-heading">
+        <p class="chapter">05 · 會動不等於可以隨意做</p>
+        <h2>實作前的安全閘門</h2>
+        <p>這是低電壓但高電流的短路型示範；釹磁鐵與電池都需要成人管理。</p>
+      </div>
+      <div class="safety-banner"><span aria-hidden="true">!</span><div><strong>建議定位：教師示範或高中小組探究</strong><p>未滿 14 歲學生不應自行接觸小型高強度磁鐵。若懷疑吞入磁鐵，立刻就醫。</p></div></div>
+      <div class="safety-grid">
+        <article><span>01</span><h3>限時通電</h3><p>線圈近似短路，電池與導線可能快速升溫。每次僅短時間運行；發熱、異味、變形或漏液立刻停止。</p></article>
+        <article><span>02</span><h3>清點強磁鐵</h3><p>課前課後逐顆清點，遠離幼兒、寵物與可能吞食者；不要用磁鐵模仿口鼻穿洞。</p></article>
+        <article><span>03</span><h3>保護眼手與設備</h3><p>強磁鐵可能夾傷或碎裂；配戴護目鏡，讓磁鐵慢慢靠近，並遠離心律調節器與磁性資料載體。</p></article>
+        <article><span>04</span><h3>使用正確材料</h3><p>使用狀況良好的 1.5 V 乾電池、裸銅線與尺寸合適的磁鐵；不使用鋰電池或外接高電壓電源。</p></article>
+      </div>
+      <section class="teacher-flow">
+        <div><p class="task-label">45 分鐘課堂建議</p><h3>從驚奇走到可驗證的解釋</h3></div>
+        <ol>
+          <li><strong>5 分</strong><span>無聲看影片，寫下「看見」與「推測」各一項。</span></li>
+          <li><strong>10 分</strong><span>用四步驟因果鏈標出能量來源、電流路徑與受力。</span></li>
+          <li><strong>15 分</strong><span>在數位模型中一次改一個變因，記錄方向與相對推力。</span></li>
+          <li><strong>10 分</strong><span>完成證據闖關，小組互相挑戰解釋。</span></li>
+          <li><strong>5 分</strong><span>用一句「因為…所以…」解釋為何通電區會跟著火車移動。</span></li>
+        </ol>
+      </section>
+      <label class="check-evidence final-check"><input type="checkbox" id="safetyEvidence"> 我能說出至少兩項實作風險，以及遇到電池發熱時應立即停止。</label>
+    </section>
+  </main>
+
+  <footer>
+    <p>以原始影片為觀察素材；物理說明依大學示範資料與研究文獻查核。<a href="docs/references.md">查看資料來源</a></p>
+    <p>本教材的磁場線、速度與推力皆為概念模型。</p>
+  </footer>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
